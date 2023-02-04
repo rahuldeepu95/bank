@@ -3,9 +3,9 @@
 <h4 class="mt-2 p-2 text-center">Login to your account </h4>
 <form action="">
     <div class="text-center">
-<input (change)="acnoChange($event)" id="acId"name="acno" type="text" [placeholder]="placeholder1" class="form-control text-center mt-3">
-<input (change)="passChange($event)" id="psw" name="pass" type="password" placeholder="Enter password" class="form-control text-center mt-3">
-<button type="button" (click)="login()" class="btn btn-outline-danger  mt-3 text-center">Login </button>
+<input #acno  id="acId"name="acno" type="text" [placeholder]="placeholder1" class="form-control text-center mt-3">
+<input #psw id="psw" name="pass" type="password" placeholder="Enter password" class="form-control text-center mt-3">
+<button type="button" (click)="login(acno,psw)" class="btn btn-outline-danger  mt-3 text-center">Login </button>
 </div>
 </form>
 

@@ -21,3 +21,4 @@ one way binding
 ---------------------------------
 i. event binding (event)="method()"
 ii. event binding using $event    (event)=method($event)
+iii. event binding with template rendering variable #variable

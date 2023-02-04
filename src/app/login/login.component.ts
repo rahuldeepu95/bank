@@ -9,8 +9,8 @@ export class LoginComponent {
   data="Your banking partner."
   
   placeholder1="Enter a/c number"
-  acno=''
-  pass=''
+  // acno=''
+  // pass=''
 
   userDetails:any={
     1000:{acno:1000,username:"anu",password:"abc123",balance:0},
@@ -20,15 +20,50 @@ export class LoginComponent {
 
   }
   constructor() { }
-login(){
-  alert('login complete')
-}
-acnoChange(event:any){
-  this.acno=(event.target.value);
-  console.log(this.acno);
+  ngOnInit() { }
+login(a:any,b:any){
+  var acnum=a.value
+  var psw=b.value
+  var userDetails=this.userDetails
+  if(acnum in userDetails){
+    if(psw==userDetails[acnum]["password"]){
+      alert("login sucessful")
+
+    }
+    else{
+      alert('Incorrect password')
+    }
+
+  }
+  else{
+    alert("User not registered")
+  }
 }
 
-passChange(event:any){
-this.pass=(event.target.value);
-}
+// login(){
+//   var acnum=this.acno
+//   var psw=this.pass
+//   var userDetails=this.userDetails
+//   if(acnum in userDetails){
+//     if(psw==userDetails[acnum]["password"]){
+//       alert("login sucessful")
+
+//     }
+//     else{
+//       alert('Incorrect password')
+//     }
+
+//   }
+//   else{
+//     alert("User not registered")
+//   }
+// }
+// acnoChange(event:any){
+//   this.acno=(event.target.value);
+//   // console.log(this.acno);
+// }
+
+// passChange(event:any){
+// this.pass=(event.target.value);
+// }
 }
