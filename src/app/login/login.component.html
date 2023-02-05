@@ -3,9 +3,13 @@
 <h4 class="mt-2 p-2 text-center">Login to your account </h4>
 <form action="">
     <div class="text-center">
-<input #acno  id="acId"name="acno" type="text" [placeholder]="placeholder1" class="form-control text-center mt-3">
-<input #psw id="psw" name="pass" type="password" placeholder="Enter password" class="form-control text-center mt-3">
-<button type="button" (click)="login(acno,psw)" class="btn btn-outline-danger  mt-3 text-center">Login </button>
+<input [(ngModel)]="acno"  id="acId"name="acno" type="text" [placeholder]="placeholder1" class="form-control text-center mt-3">
+<input [(ngModel)]="psw" id="psw" name="pass" type="password" placeholder="Enter password" class="form-control text-center mt-3">
+<button type="button" (click)="login()" class="btn btn-outline-danger  mt-3 text-center">Login </button>
+
+</div>
+<div class="text-center p-2 mt-2 ">
+<a style="text-decoration: none;" routerLink="register"><strong>Not Registered? </strong> <span style="color:#658864;">Click here</span> </a>
 </div>
 </form>
 

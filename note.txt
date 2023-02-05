@@ -22,3 +22,32 @@ one way binding
 i. event binding (event)="method()"
 ii. event binding using $event    (event)=method($event)
 iii. event binding with template rendering variable #variable
+
+3. two way binding
+-------------------
+2.1 ngModel [(ngModel)]="property"
+
+Redirection in angular
+----------------------
+Module- app routing module
+Router - a class used to redirect.
+methods- navgateByUrl
+
+Dependency Injection
+---------------------
+to share datas from one class to another class
+
+inside constructor
+
+access_specifier reference:ClassName
+private/public
+
+reference.method()
+
+
+Angular Services
+----------------
+to store redentent datas and methods
+-all the components can access the datas and methods defined in the service file easily
+
+ng g s service_name
