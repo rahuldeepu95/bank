@@ -1,15 +1,15 @@
 <h4 class="p-3 mt-2">{{data}}</h4>
 <div class="container p-3 mt-3 w-25 rounded ms-5 border border-3 border-primary-subtle">
     <h4 class="mt-2 p-2 text-center">Register your account </h4>
-    <form action="">
+    <form action="" (ngSubmit)="register()">
         <div class="text-center">
 
-            <input id="user" name="uName" type="text" placeholder="enter username"
+            <input [(ngModel)]="uname" id="user" name="uName" type="text" placeholder="enter username"
                 class="form-control text-center mt-3">
-            <input id="acid" name="acno1" type="text" placeholder="enter a/c no." class="form-control text-center mt-3">
-            <input id="psw1" name="pass1" type="password" placeholder="Enter password"
+            <input [(ngModel)]="acno"  id="acid" name="acno1" type="text" placeholder="enter a/c no." class="form-control text-center mt-3">
+            <input [(ngModel)]="psw"  id="psw1" name="pass1" type="password" placeholder="Enter password"
                 class="form-control text-center mt-3">
-            <button type="button" class="btn btn-outline-danger  mt-3 text-center">Signup </button>
+            <button type="submit"  class="btn btn-outline-danger  mt-3 text-center">Register</button>
 
         </div>
         

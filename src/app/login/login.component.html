@@ -1,11 +1,11 @@
 <h4 class="p-3 mt-2">{{data}}</h4>
 <div class="container p-4 mt-5 w-25 rounded ms-5 border border-3 border-primary-subtle">
 <h4 class="mt-2 p-2 text-center">Login to your account </h4>
-<form action="">
+<form action="" (ngSubmit)="login()">
     <div class="text-center">
 <input [(ngModel)]="acno"  id="acId"name="acno" type="text" [placeholder]="placeholder1" class="form-control text-center mt-3">
 <input [(ngModel)]="psw" id="psw" name="pass" type="password" placeholder="Enter password" class="form-control text-center mt-3">
-<button type="button" (click)="login()" class="btn btn-outline-danger  mt-3 text-center">Login </button>
+<button type="submit"  class="btn btn-outline-danger  mt-3 text-center">Login </button>
 
 </div>
 <div class="text-center p-2 mt-2 ">
