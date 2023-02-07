@@ -1,18 +1,19 @@
 <h4 class="p-3 mt-2">{{data}}</h4>
-<div class="container p-3 mt-3 w-25 rounded ms-5 border border-3 border-primary-subtle">
+<div class=" text-center container col-lg-6 ms-2">
+    <div class="container p-3 mt-3 w-50 rounded ms-2 border border-3 border-primary-subtle">
     <h4 class="mt-2 p-2 text-center">Register your account </h4>
-    <form action="" (ngSubmit)="register()">
-        <div class="text-center">
+    <form [formGroup]="registerForm" action="" (ngSubmit)="register()">
+        <div class=" container text-center">
 
-            <input [(ngModel)]="uname" id="user" name="uName" type="text" placeholder="enter username"
+            <input formControlName="uname"  id="user" name="uName" type="text" placeholder="enter username"
                 class="form-control text-center mt-3">
-            <input [(ngModel)]="acno"  id="acid" name="acno1" type="text" placeholder="enter a/c no." class="form-control text-center mt-3">
-            <input [(ngModel)]="psw"  id="psw1" name="pass1" type="password" placeholder="Enter password"
+            <input formControlName="acno"  id="acid" name="acno1" type="text" placeholder="enter a/c no." class="form-control text-center mt-3">
+            <input formControlName="psw"  id="psw1" name="pass1" type="password" placeholder="Enter password"
                 class="form-control text-center mt-3">
             <button type="submit"  class="btn btn-outline-danger  mt-3 text-center">Register</button>
 
         </div>
         
     </form>
-
+</div>
 </div>

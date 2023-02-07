@@ -56,3 +56,16 @@ Angular directives - to manipulate DOM
 
 1. component directives
 2. structurals directives *ngFor
+
+validation in Angular
+---------------------
+1. template driven form
+2. model driven form
+
+2.1 reactive form - used to create model of form
+reactive form contains -group,array,control
+
+-ReactiveFormsModule  - module
+-FormBuilder          - class used to create model form
+-group()              - method to crate model
+
