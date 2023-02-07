@@ -1,1 +1,28 @@
-<h3 class="text-danger p-2 mt-2 ms-2">Welcome {{user}}!</h3>
+<h3 class="text-danger p-5 mt-5 ms-2">Welcome {{user}}!</h3>
+<div class="top row" >
+<div class=" text-center container col-lg-6">
+    <div class="container w-75 rounded text-center border border-primary p-5 mt-5 "style="background-color:#EEF1FF">
+    <h4 class="text-success p-3">Deposit</h4>
+    <form action="">
+        <input [(ngModel)]="acno" id="acid" name="accno" type="text" placeholder="enter a/c no." class="mt-2 text-center form-control">
+        <input [(ngModel)]="psw" id="pass" name="psw" type="password" placeholder="enter password" class="mt-2 text-center form-control">
+        <input [(ngModel)]="amnt" id="amtid" name="amt" type="text" placeholder="enter amount" class="mt-2 text-center form-control"><br>
+        <button type="button" (click)="deposit()" class="btn btn-outline-success">Deposit</button>
+        
+    </form>
+</div>
+</div>
+<div class=" text-center container col-lg-6" >
+    <div class="container w-75 rounded text-center border border-primary p-5 mt-5" style="background-color:#EEF1FF">
+    <h4 class="text-warning p-3">Withdraw</h4>
+    <form action="">
+        <input [(ngModel)]="acno1" id="acid1" name="accno1" type="text" placeholder="enter a/c no." class="mt-2 text-center form-control">
+        <input [(ngModel)]="psw1" id="pass1" name="psw1" type="password" placeholder="enter password" class="mt-2 text-center form-control">
+        <input [(ngModel)]="amnt1" id="amtid1" name="amt1" type="text" placeholder="enter amount" class="mt-2 text-center form-control"><br>
+        <button type="button" (click)="withdraw()" class="btn btn-outline-warning">Withdraw</button>
+        <h4></h4>
+        
+    </form>
+</div>
+</div>
+</div>

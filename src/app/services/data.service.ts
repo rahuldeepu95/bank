@@ -45,5 +45,55 @@ export class DataService {
     return false
   }
 }
+deposit(acnum:any,password:any,amount:any){
+  var amnt=parseInt(amount)
+let userDetails=this.userDetails
+if(acnum in userDetails){
+  if(password==userDetails[acnum]["password"]){
+    // updated balance
+    userDetails[acnum]["balance"]+=amnt
+    return userDetails[acnum]["balance"]
+    
+    
+  }
+  else{
+    return false
+  }
+}
+else{
+  return false
+}
+}
+
+withdraw(acnum:any,password:any,amount:any){
+  var amnt=parseInt(amount)
+let userDetails=this.userDetails
+if(acnum in userDetails){
+  if(password==userDetails[acnum]["password"]){
+    if(amnt<userDetails[acnum]["balance"]){
+
+      // updated balance
+    userDetails[acnum]["balance"]-=amnt
+    return userDetails[acnum]["balance"]
+    
+    }
+    else{
+      alert('insufficient funds')
+      return false
+
+    }
+    
+    
+  }
+  else{
+    alert('incorrect password')
+    return false
+  }
+}
+else{
+  alert('incorrect a/c no')
+  return false
+}
+}
   
 }
