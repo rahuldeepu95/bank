@@ -1,4 +1,8 @@
-<h3 class="text-danger p-5 mt-5 ms-2">Welcome {{user}}!</h3>
+<h3 class="text-danger p-3 mt-2 ms-2">Welcome {{user}}!</h3>
+<div class="ms-5 p-2 rounded-5 rounded-top-0 border border-danger w-25  text-center history">
+<a style="text-decoration:none;color:#00337C" routerLink="/transaction">View transaction history</a>
+</div>
+
 <div class="top row" >
 <div class=" text-center container col-lg-6">
     <div class="container w-75 rounded text-center border border-primary p-5 mt-5 "style="background-color:#EEF1FF">
@@ -20,7 +24,7 @@
         <input [(ngModel)]="psw1" id="pass1" name="psw1" type="password" placeholder="enter password" class="mt-2 text-center form-control">
         <input [(ngModel)]="amnt1" id="amtid1" name="amt1" type="text" placeholder="enter amount" class="mt-2 text-center form-control"><br>
         <button type="button" (click)="withdraw()" class="btn btn-outline-warning">Withdraw</button>
-        <h4></h4>
+       
         
     </form>
 </div>

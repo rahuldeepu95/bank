@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alegreya+Sans&family=Anton&family=Cormorant+Upright:wght@700&family=Libre+Franklin&family=Montserrat&family=Mulish:wght@500&family=Noto+Sans+JP:wght@900&family=Passions+Conflict&family=Raleway:ital,wght@0,300;1,300&family=Ubuntu&display=swap');
+
+body {
     background-image: url("./assets/pexels-cottonbro-studio-3944405.jpg");
     background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position:left; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left;
 }

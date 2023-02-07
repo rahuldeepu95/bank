@@ -51,3 +51,8 @@ to store redentent datas and methods
 -all the components can access the datas and methods defined in the service file easily
 
 ng g s service_name
+
+Angular directives - to manipulate DOM
+
+1. component directives
+2. structurals directives *ngFor

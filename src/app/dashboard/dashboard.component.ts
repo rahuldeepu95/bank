@@ -26,7 +26,7 @@ export class DashboardComponent {
     var amnt = this.amnt
     const result = this.ds.deposit(acno, psw, amnt)
     if (result) {
-      alert(`Your account had been credited Rs. ${amnt}, your current balance is ${result}.`)
+      alert(`Your account had been credited Rs. ${amnt}, your current balance is Rs. ${result}.`)
     }
     else {
       alert('incorrect username or password')
@@ -38,7 +38,7 @@ export class DashboardComponent {
     var amnt = this.amnt1
     const result=this.ds.withdraw(acno,psw,amnt)
     if(result){
-      alert(`Your account had been debited Rs. ${amnt}, your current balance is ${result}.`)
+      alert(`Your account had been debited Rs. ${amnt}, your current balance is Rs.${result}.`)
     }
   }
 }

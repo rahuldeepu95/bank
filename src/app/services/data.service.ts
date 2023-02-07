@@ -5,13 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   currentUser=''
+  currentAcno=''
 
   constructor() { }
   userDetails: any = {
-    1000: { acno: 1000, username: "anu", password: "abc123", balance: 0 },
-    1001: { acno: 1001, username: "amal", password: "abc123", balance: 0 },
-    1002: { acno: 1002, username: "arun", password: "abc123", balance: 0 },
-    1003: { acno: 1003, username: "akhil", password: "abc123", balance: 0 }
+    1000: { acno: 1000, username: "anu", password: "abc123", balance: 0,transaction:[]},
+    1001: { acno: 1001, username: "amal", password: "abc123", balance: 0,transaction:[]},
+    1002: { acno: 1002, username: "arun", password: "abc123", balance: 0,transaction:[]},
+    1003: { acno: 1003, username: "akhil", password: "abc123", balance: 0,transaction:[]}
 
   }
   register(uname:any,acno:any,psw:any){
@@ -30,7 +31,8 @@ export class DataService {
   if(acno in userDetails){
     if(psw==userDetails[acno]["password"]){
       this.currentUser=userDetails[acno]["username"]
-      console.log(this.currentUser);
+      // console.log(this.currentUser);
+      this.currentAcno=acno
       
       return true
     
@@ -52,6 +54,15 @@ if(acnum in userDetails){
   if(password==userDetails[acnum]["password"]){
     // updated balance
     userDetails[acnum]["balance"]+=amnt
+    // transaction data storing
+    userDetails[acnum]["transaction"].push({Type:"Credit",amount:amnt})
+  //  console.log(userDetails);
+   
+    
+    
+    
+
+
     return userDetails[acnum]["balance"]
     
     
@@ -70,10 +81,15 @@ withdraw(acnum:any,password:any,amount:any){
 let userDetails=this.userDetails
 if(acnum in userDetails){
   if(password==userDetails[acnum]["password"]){
-    if(amnt<userDetails[acnum]["balance"]){
+    if(amnt<=userDetails[acnum]["balance"]){
 
       // updated balance
     userDetails[acnum]["balance"]-=amnt
+
+    userDetails[acnum]["transaction"].push({Type:"Debit",amount:amnt})
+
+    // console.log(userDetails);
+
     return userDetails[acnum]["balance"]
     
     }
@@ -95,5 +111,8 @@ else{
   return false
 }
 }
-  
+  getTransaction(acno:any){
+  return this.userDetails[acno]["transaction"]
+
+  }
 }
